@@ -72,12 +72,41 @@ margin:auto auto;
 </div>
 
 <script>
-var update_loop = setInterval(Main, 1000)
+
+
+//LOOK HERE FOR THE STUFF http://www.rafaelservantez.com/writings_tutorials_web_js_update.html
+var update_loop = setInterval(Main, 1000);
+
+/*
+Then we call the main update function once to begin with.  This is because the
+"setInterval" method calls the defined function AFTER the amount of time you've
+entered as the second argument.  That means that if we set it to a time of one
+second then the displayed information will not actually be displayed for a full
+second.  It's not much but we want the clock in this example to display as soon
+as the page is loaded.
+*/
 
 Main();
 
+// Now we can write out our main update function.
+
 function Main(){
+
+    // Thankfully JavaScript has an inherent time object we can use.
+    // It does need to be called every time you want an update value however.
+    var time = new Date();
+
+    // The "Date" method has predefined methods of its own.  These three for
+    // instance will return hours, minutes, and seconds as you might guess.
+    var hours = time.getHours();
+    var minutes = time.getMinutes();
+    var seconds = time.getSeconds();
+
+    // We can then reference these values to create our clock as the inner
+    // html of any div we choose.
     document.getElementById("days").innerHTML = hours + ':' + minutes + ':' + seconds;
+
+
 }
 </script>
 

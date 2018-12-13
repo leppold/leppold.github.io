@@ -86,6 +86,9 @@ function Main(){
     var hours = time.getHours();
     var minutes = time.getMinutes();
     var seconds = time.getSeconds();
+	if (hours.toString().length=== 1){
+hours="0"+hours
+}
 	if (minutes.toString().length=== 1){
 minutes="0"+minutes
 }

@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+	<meta charset="utc-8"/>
+	<title> Leppold </title>
+	<style type="text/css">
+		* {
+			padding:24;
+			margin:48;
+			/*color: #fff;*/	
+			font-family: helvetica;
+overflow: hidden;
+		}
+		body,html{height:100%;}
+
+		a{
+			text-decoration: underline;
+		}
+
+		a:link,a:visited{
+			color: #008080;
+		}
+		a:hover{
+			color: #004d4d;
+		}
+		a:active{
+			color: #00b3b3;
+		}
+.container{
+
+max-width:500px;
+text-align:center;
+
+
+}
+
+.page {
+
+height: 100%;
+width: 100%;
+display:flex;
+flex-direction: column;
+ align-items: center;
+    justify-content: center;
+margin:auto auto;
+
+}
+		
+		
+</style>
+
+
+
+<script> 
+
+
+
+</script>
+
+
+</head>
+<body>
+
+<div class="page">
+<div class="container">
+<h1 id="days">
+1492
+</h1>
+</div>
+</div>
+
+<script>
+var update_loop = setInterval(Main, 1000)
+
+Main();
+
+function Main(){
+    document.getElementById("days").innerHTML = hours + ':' + minutes + ':' + seconds;
+}
+</script>
+
+	
+
+</body>
+</html>
+
+
+
+
+
+
